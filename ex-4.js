@@ -82,3 +82,14 @@ let orders = [
 ];
 
 // Start coding here
+let mostExpensive = 0;
+let nameID = 0;
+
+for(let id of orders){
+  if(mostExpensive < id.productPrice){
+    mostExpensive = id.productPrice;
+    nameID = id.productName;
+  }
+}
+
+console.log(`The most expensive product in orders: ${nameID} bath`);
