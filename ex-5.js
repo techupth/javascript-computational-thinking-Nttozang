@@ -82,3 +82,17 @@ let orders = [
 ];
 
 // Start coding here
+let result = 0;
+let nameID = 0;
+let maxPrice = 0;
+
+for(let id of orders){
+  result = id.productPrice*id.productQuantity;
+  //console.log(result);
+  if(result > maxPrice){
+    maxPrice = result;
+    nameID = id.id;
+  }
+}
+
+console.log(`The most expensive order is order id ${nameID} (${maxPrice} Bath)`);
